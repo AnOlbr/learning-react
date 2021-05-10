@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import styles from './Column.scss';
 import PropTypes from 'prop-types';
@@ -21,9 +22,9 @@ class Column extends React.Component {
           ...state.cards,
           {
             key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
-            title
-          }
-        ]
+            title,
+          },
+        ],
       }
     ));
   }
@@ -40,10 +41,10 @@ class Column extends React.Component {
           ))}
         </div>
         <div className={styles.creator}>
-            <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
+          <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
         </div>
       </section>
-    )
+    );
   }
 }
 
