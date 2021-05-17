@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import styles from './Column.scss';
 import PropTypes from 'prop-types';
@@ -14,6 +13,7 @@ class Column extends React.Component {
     icon: PropTypes.node,
     cards: PropTypes.array,
     addCard: PropTypes.func,
+    title: PropTypes.string,
   }
 
   static defaultProps = {
