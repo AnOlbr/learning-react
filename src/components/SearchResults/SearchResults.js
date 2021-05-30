@@ -4,7 +4,6 @@ import styles from '../Column/Column.scss';
 import Card from '../Card/Card.js';
 import Icon from '../Icon/Icon.js';
 import {settings} from '../../data/dataStore';
-import Creator from '../Creator/Creator.js';
 
 class SearchResults extends React.Component {
   static propTypes = {
@@ -32,9 +31,6 @@ class SearchResults extends React.Component {
           {cards.map(cardData => (
             <Card key={cardData.id} {...cardData} />
           ))}
-        </div>
-        <div className={styles.creator}>
-          <Creator text={settings.cardCreatorText} action={addCard}/>
         </div>
       </section>
     );
